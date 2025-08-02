@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butler:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #EFEDE8;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Butler', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terra-cotta text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-cocoa border border-cocoa px-6 py-3 rounded-md hover:bg-cocoa hover:text-white transition-all duration-300 font-medium;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-terra-cotta focus:border-transparent;
+  }
+}
