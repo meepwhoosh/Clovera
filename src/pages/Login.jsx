@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { auth } from '../firebase/firebaseConfig';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider , signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -19,7 +19,6 @@ const Login = () => {
   const { login, signup } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.from?.pathname || '/';
 
   const handleInputChange = (e) => {
@@ -51,12 +50,9 @@ const Login = () => {
       if (isLogin) {
         await login(formData.email, formData.password);
       } else {
-        const userCredential = await signup(formData.email, formData.password);
-        await setDoc(doc(db, 'users', userCredential.user.uid), {
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email
-        });
+        await signup(formData.email, formData.password);
+        // Data user hanya tersimpan di Firebase Auth
+        // Tidak menyimpan profil tambahan di Firestore
       }
       navigate(from, { replace: true });
     } catch (error) {
@@ -72,11 +68,7 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      await setDoc(doc(db, 'users', user.uid), {
-        firstName: user.displayName?.split(' ')[0] || '',
-        lastName: user.displayName?.split(' ')[1] || '',
-        email: user.email
-      }, { merge: true });
+      // Tidak menyimpan user ke Firestore
       navigate(from, { replace: true });
     } catch (error) {
       setError(error.message);
