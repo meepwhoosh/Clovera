@@ -97,14 +97,37 @@ const ProductCard = ({ product }) => {
                                      color.toLowerCase() === 'pink' ? '#ffc0cb' :
                                      color.toLowerCase() === 'blue' ? '#3b82f6' :
                                      color.toLowerCase() === 'green' ? '#10b981' :
-                                     color.toLowerCase() === 'dusty rose' ? '#E5CBCC' :
-                                     color.toLowerCase() === 'camel' ? '#c19a6b' :
+                                     color.toLowerCase() === 'red' ? '#ff0000' :
+                                     color.toLowerCase() === 'light blue' ? '#add8e6' :
                                      color.toLowerCase() === 'olive' ? '#808000' :
-                                     color.toLowerCase() === 'sage' ? '#9caf88' :
-                                     color.toLowerCase() === 'champagne' ? '#f7e7ce' :
-                                     color.toLowerCase() === 'burgundy' ? '#800020' :
+                                     color.toLowerCase() === 'lavender' ? '#e6e6fa' :
+                                     color.toLowerCase() === 'lilac' ? '#c8a2c8' :
+                                     color.toLowerCase() === 'yellow' ? '#ffff00' :
+                                     color.toLowerCase() === 'mint green' ? '#98ff98' :
                                      color.toLowerCase() === 'khaki' ? '#c3b091' :
-                                     color.toLowerCase() === 'tan' ? '#d2b48c' :
+                                     color.toLowerCase() === 'mustard' ? '#ffdb58' :
+                                     color.toLowerCase() === 'orange' ? '#ffa500' :
+                                     color.toLowerCase() === 'dusty rose' ? '#d6a5a1' :
+                                     color.toLowerCase() === 'hot pink' ? '#ff69b4' :
+                                     color.toLowerCase() === 'nude' ? '#f2d6d0' :
+                                     color.toLowerCase() === 'purple' ? '#800080' :
+                                     color.toLowerCase() === 'pastel green' ? '#77dd77' :
+                                     color.toLowerCase() === 'mauve' ? '#e0b0ff' :
+                                     color.toLowerCase() === 'camel' ? '#c19a6b' :
+                                     color.toLowerCase() === 'champagne' ? '#f7e7ce' :
+                                     color.toLowerCase() === 'electric blue' ? '#7df9ff' :
+                                     color.toLowerCase() === 'metallic silver' ? '#c0c0c0' :
+                                     color.toLowerCase() === 'dusty pink' ? '#d8a5a1' :
+                                     color.toLowerCase() === 'peach' ? '#ffcc99' :
+                                     color.toLowerCase() === 'sage' ? '#9caf88' :
+                                     color.toLowerCase() === 'coral' ? '#ff7f50' :
+                                     color.toLowerCase() === 'ivory' ? '#fffff0' :
+                                     color.toLowerCase() === 'sky blue' ? '#87ceeb' :
+                                     color.toLowerCase() === 'gold' ? '#ffd700' :
+                                     color.toLowerCase() === 'clear' ? '#ffffff' :
+                                     color.toLowerCase() === 'leopard print' ? '#d09800' :
+                                     color.toLowerCase() === 'forest green' ? '#228b22' :
+                                     color.toLowerCase() === 'maroon' ? '#800000' :
                                      '#d1d5db'
                     }}
                     title={color}
@@ -118,8 +141,8 @@ const ProductCard = ({ product }) => {
 
             {/* Price */}
             <div className="flex items-center justify-between">
-              <span className="text-xl font-butler font-semibold text-cocoa">
-                ${product.price}
+              <span className="text-l font-butler font-semibold text-cocoa">
+                IDR {product.price}
               </span>
               
               {/* Sizes */}

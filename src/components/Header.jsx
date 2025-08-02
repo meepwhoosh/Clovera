@@ -14,7 +14,7 @@ import {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { currentUser, logout } = useAuth();
+  const { user , logout } = useAuth();
   const { getCartItemsCount } = useCart();
   const { wishlistItems } = useWishlist();
   const location = useLocation();
@@ -96,7 +96,7 @@ const Header = () => {
               )}
             </Link>
 
-            {currentUser ? (
+            {user ? (
               <div className="relative group">
                 <button className="text-cocoa hover:text-terra-cotta transition-colors">
                   <UserIcon className="h-6 w-6" />

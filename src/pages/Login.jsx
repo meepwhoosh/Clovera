@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { auth } from '../firebase/firebaseConfig';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -49,7 +51,12 @@ const Login = () => {
       if (isLogin) {
         await login(formData.email, formData.password);
       } else {
-        await signup(formData.email, formData.password);
+        const userCredential = await signup(formData.email, formData.password);
+        await setDoc(doc(db, 'users', userCredential.user.uid), {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email
+        });
       }
       navigate(from, { replace: true });
     } catch (error) {
@@ -58,6 +65,22 @@ const Login = () => {
     }
 
     setLoading(false);
+  };
+
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      await setDoc(doc(db, 'users', user.uid), {
+        firstName: user.displayName?.split(' ')[0] || '',
+        lastName: user.displayName?.split(' ')[1] || '',
+        email: user.email
+      }, { merge: true });
+      navigate(from, { replace: true });
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
@@ -232,6 +255,7 @@ const Login = () => {
             <div className="mt-6 grid grid-cols-2 gap-3">
               <button
                 type="button"
+                onClick={handleGoogleSignIn}
                 className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24">
