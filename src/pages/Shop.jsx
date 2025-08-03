@@ -143,7 +143,7 @@ const Shop = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1736741701910-3e8a563b926a?q=80&w=1170&auto=format&fit=crop')"
           }}
         ></div>
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

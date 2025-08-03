@@ -14,7 +14,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1563310791-ae647a16498b?q=80&w=1084&auto=format&fit=crop')"
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
@@ -109,7 +109,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=600&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1596433904747-e8b061219a71?w=600&auto=format&fit=crop"
                 alt="Luxury Scarves"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -127,7 +127,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1572705824045-3dd0c9a47945?q=80&w=1934&auto=format&fit=crop"
                 alt="About Clovera"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
