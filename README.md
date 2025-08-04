@@ -24,8 +24,6 @@ Clovera menampilkan katalog produk fashion dinamis yang terintegrasi dengan Fire
 ---
 
 ## ✨ Features
-
-## ✨ Features
 - Login & Register dengan Firebase Authentication (Email/Password & Google)
 - Landing Page berisi pengenalan tentang Clovera
 - Shop Page dengan daftar produk fashion dari Firestore (dinamis)
