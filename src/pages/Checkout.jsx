@@ -223,7 +223,6 @@ const Checkout = () => {
                       onChange={handleInputChange}
                       className="input-field"
                     >
-                      <option value="">Select Country</option>
                       <option value="Indonesia">Indonesia</option>
                       <option value="United States">United States</option>
                       <option value="Canada">Canada</option>
