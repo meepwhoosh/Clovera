@@ -18,7 +18,7 @@ const Checkout = () => {
     city: '',
     state: '',
     zipCode: '',
-    country: 'United States',
+    country: '',
     paymentMethod: 'card',
     cardNumber: '',
     expiryDate: '',
