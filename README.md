@@ -30,7 +30,8 @@ Clovera menampilkan katalog produk fashion dinamis yang terintegrasi dengan Fire
 - Product Filtering berdasarkan nama (A-Z), warna, kategori, harga (Low to High dan High to Low)
 - Product Detail Page dengan info lengkap dan aksi ke Cart/Wishlist
 - Wishlist dan Cart
-- Checkout Dummy Page yang menampilkan ringkasan pesanan 
+- Checkout Dummy Page yang menampilkan ringkasan pesanan
+- Profile Page yang memuat informasi akun pengguna
 - Responsif dan mobile-friendly UI dengan desain visual yang modern
 
 ## 🚀 Setup Instructions
@@ -60,3 +61,11 @@ Clovera menampilkan katalog produk fashion dinamis yang terintegrasi dengan Fire
 ## 🤖 AI Support Explanation
 
 Selama pengembangan, AI IBM Granite digunakan untuk membantu menyusun dokumentasi & struktur folder modular, dan mempercepat proses penulisan komponen kode. Dukungan AI digunakan sebagai co-pilot kreatif, tanpa menggantikan pengambilan keputusan teknis dan desain.
+
+--
+
+## 🌐 Live Deployment
+
+Website dapat diakses lewat link berikut:
+
+🔗 https://clovera.netlify.app
