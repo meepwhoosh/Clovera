@@ -62,7 +62,7 @@ Clovera menampilkan katalog produk fashion dinamis yang terintegrasi dengan Fire
 
 Selama pengembangan, AI IBM Granite digunakan untuk membantu menyusun dokumentasi & struktur folder modular, dan mempercepat proses penulisan komponen kode. Dukungan AI digunakan sebagai co-pilot kreatif, tanpa menggantikan pengambilan keputusan teknis dan desain.
 
---
+---
 
 ## 🌐 Live Deployment
 
