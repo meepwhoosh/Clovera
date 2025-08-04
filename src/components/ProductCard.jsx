@@ -142,7 +142,7 @@ const ProductCard = ({ product }) => {
             {/* Price */}
             <div className="flex items-center justify-between">
               <span className="text-l font-butler font-semibold text-cocoa">
-                IDR {product.price}
+                IDR {product.price}K
               </span>
               
               {/* Sizes */}

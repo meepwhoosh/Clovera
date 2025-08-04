@@ -304,7 +304,7 @@ const Checkout = () => {
                 disabled={isProcessing}
                 className={`w-full btn-primary ${isProcessing ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                {isProcessing ? 'Processing...' : `Complete Order - $${total.toFixed(2)}`}
+                {isProcessing ? 'Processing...' : `Complete Order - Rp${total.toFixed(3)}`}
               </button>
             </form>
           </div>
@@ -330,7 +330,7 @@ const Checkout = () => {
                       </p>
                     </div>
                     <div className="font-medium text-cocoa">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      Rp {(item.price * item.quantity).toFixed(3)}
                     </div>
                   </div>
                 ))}
@@ -340,21 +340,21 @@ const Checkout = () => {
               <div className="space-y-3 border-t pt-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-medium">${subtotal.toFixed(2)}</span>
+                  <span className="font-medium">Rp {subtotal.toFixed(3)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium text-green-600">
-                    {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
+                    {shipping === 0 ? 'Free' : `Rp ${shipping.toFixed(3)}`}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
-                  <span className="font-medium">${tax.toFixed(2)}</span>
+                  <span className="font-medium">Rp {tax.toFixed(3)}</span>
                 </div>
                 <div className="flex justify-between text-lg font-semibold text-cocoa border-t pt-3">
                   <span>Total</span>
-                  <span className="font-butler">${total.toFixed(2)}</span>
+                  <span className="font-butler">Rp {total.toFixed(3)}</span>
                 </div>
               </div>
             </div>

@@ -156,7 +156,7 @@ const ProductDetail = () => {
               </div>
               
               <div className="text-3xl font-butler font-bold text-cocoa mb-6">
-                ${product.price}
+                Rp {product.price}.000
               </div>
             </div>
 
@@ -249,11 +249,11 @@ const ProductDetail = () => {
                 className="w-full btn-primary flex items-center justify-center space-x-2"
               >
                 <ShoppingBagIcon className="h-5 w-5" />
-                <span>Add to Cart - ${(product.price * quantity).toFixed(2)}</span>
+                <span>Add to Cart - Rp {(product.price * quantity).toFixed(3)}</span>
               </button>
               
               <div className="text-sm text-gray-600 space-y-1">
-                <p>✓ Free shipping on orders over $100</p>
+                <p>✓ Free shipping on orders over Rp 250.000</p>
                 <p>✓ 30-day returns</p>
                 <p>✓ Secure checkout</p>
               </div>

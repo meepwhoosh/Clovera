@@ -20,9 +20,9 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/home' },
     { name: 'Shop', href: '/shop' },
-    { name: 'About', href: '/#about' },
+    { name: 'About', href: '#' },
   ];
 
   const isActive = (path) => {
@@ -39,12 +39,12 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-light-stone border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-butler font-bold text-cocoa">
+            <Link to="/home" className="text-2xl font-butler font-bold text-cocoa">
               Clovera
             </Link>
           </div>
@@ -96,35 +96,16 @@ const Header = () => {
               )}
             </Link>
 
-            {user ? (
-              <div className="relative group">
-                <button className="text-cocoa hover:text-terra-cotta transition-colors">
-                  <UserIcon className="h-6 w-6" />
-                </button>
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="px-4 py-2 text-sm text-gray-700 border-b">
-                    {currentUser.email}
-                  </div>
-                  <button
-                    onClick={handleLogout}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Sign out
-                  </button>
-                </div>
-              </div>
-            ) : (
               <Link 
-                to="/login" 
+                to="/profile" 
                 className="text-cocoa hover:text-terra-cotta transition-colors"
               >
                 <UserIcon className="h-6 w-6" />
               </Link>
-            )}
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden"> 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-cocoa hover:text-terra-cotta transition-colors"
@@ -137,6 +118,8 @@ const Header = () => {
             </button>
           </div>
         </div>
+
+        
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -184,25 +167,13 @@ const Header = () => {
                   )}
                 </Link>
 
-                {currentUser ? (
-                  <div className="flex flex-col space-y-2">
-                    <span className="text-sm text-gray-600">{currentUser.email}</span>
-                    <button
-                      onClick={handleLogout}
-                      className="text-sm text-cocoa hover:text-terra-cotta transition-colors text-left"
-                    >
-                      Sign out
-                    </button>
-                  </div>
-                ) : (
                   <Link 
-                    to="/login" 
+                    to="/" 
                     className="text-cocoa hover:text-terra-cotta transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <UserIcon className="h-6 w-6" />
                   </Link>
-                )}
               </div>
             </div>
           </div>

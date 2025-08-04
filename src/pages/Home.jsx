@@ -14,7 +14,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1563310791-ae647a16498b?q=80&w=1084&auto=format&fit=crop')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1563310791-ae647a16498b?q=80&w=5000&auto=format&fit=crop')"
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
@@ -35,7 +35,7 @@ const Home = () => {
               Explore Collection
             </Link>
             <Link 
-              to="/#about" 
+              to="/#a" 
               className="btn-secondary text-lg px-8 py-4 inline-block bg-white/10 border-white text-white hover:bg-white hover:text-cocoa"
             >
               Learn More
@@ -79,32 +79,32 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-butler font-bold text-cocoa mb-6">
-                Scarf as Gift
+                Find Your Style
               </h2>
               <p className="text-gray-700 mb-6 text-lg">
-                The perfect accessory for any season. Our luxurious scarves make thoughtful gifts 
-                that combine style with comfort. Each piece is crafted from premium materials 
-                and designed to complement any wardrobe.
+                Check out our collection and enjoy the best experience of current trends. 
+                We offer a wide variety of styles, so find the one that suits your vibe 
+                and choose the category you want.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-700">
                   <span className="w-2 h-2 bg-terra-cotta rounded-full mr-3"></span>
-                  Premium cashmere and silk materials
+                  Tops & Bottoms
                 </li>
                 <li className="flex items-center text-gray-700">
                   <span className="w-2 h-2 bg-terra-cotta rounded-full mr-3"></span>
-                  Versatile designs for any occasion
+                  Outwear & Knitwear
                 </li>
                 <li className="flex items-center text-gray-700">
                   <span className="w-2 h-2 bg-terra-cotta rounded-full mr-3"></span>
-                  Beautiful gift packaging included
+                  Dress, Shoes & Accessories
                 </li>
               </ul>
               <Link 
-                to="/shop?category=accessories" 
+                to="/shop" 
                 className="btn-primary"
               >
-                Shop Scarves
+                Buy Now
               </Link>
             </div>
             <div className="relative">
@@ -135,7 +135,7 @@ const Home = () => {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-butler font-bold text-cocoa mb-6">
-                About Clovera
+                About Us
               </h2>
               <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                 Born from a passion for timeless elegance, Clovera curates fashion pieces 

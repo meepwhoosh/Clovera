@@ -110,11 +110,11 @@ const Cart = () => {
                         {/* Price */}
                         <div className="text-right">
                           <div className="font-butler font-semibold text-cocoa">
-                            ${(item.price * item.quantity).toFixed(2)}
+                            Rp {(item.price * item.quantity).toFixed(3)}
                           </div>
                           {item.quantity > 1 && (
                             <div className="text-sm text-gray-600">
-                              ${item.price} each
+                              Rp {item.price} 000 each
                             </div>
                           )}
                         </div>
@@ -150,26 +150,26 @@ const Cart = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-medium">${getCartTotal().toFixed(2)}</span>
+                  <span className="font-medium">Rp {getCartTotal().toFixed(3)}</span>
                 </div>
                 
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium text-green-600">
-                    {getCartTotal() >= 100 ? 'Free' : '$10.00'}
+                    {getCartTotal() >= 250000 ? 'Free' : 'Rp 10.000'}
                   </span>
                 </div>
                 
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
-                  <span className="font-medium">${(getCartTotal() * 0.08).toFixed(2)}</span>
+                  <span className="font-medium">Rp {(getCartTotal() * 0.08).toFixed(3)}</span>
                 </div>
                 
                 <div className="border-t pt-4">
                   <div className="flex justify-between">
                     <span className="text-lg font-semibold text-cocoa">Total</span>
                     <span className="text-lg font-butler font-bold text-cocoa">
-                      ${(getCartTotal() + (getCartTotal() >= 100 ? 0 : 10) + (getCartTotal() * 0.08)).toFixed(2)}
+                      Rp {(getCartTotal() + (getCartTotal() >= 100 ? 0 : 10) + (getCartTotal() * 0.08)).toFixed(3)}
                     </span>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ const Cart = () => {
               {getCartTotal() < 100 && (
                 <div className="bg-soft-lime p-4 rounded-md mb-6">
                   <p className="text-sm text-gray-700">
-                    Add <span className="font-semibold">${(100 - getCartTotal()).toFixed(2)}</span> more to get free shipping!
+                    Add <span className="font-semibold">Rp {(100 - getCartTotal()).toFixed(3)}</span> more to get free shipping!
                   </p>
                 </div>
               )}
