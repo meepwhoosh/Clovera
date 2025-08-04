@@ -1,12 +1,64 @@
-# React + Vite
+# 🌸 Clovera – Fashion E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Clovera** adalah proyek website e-commerce fashion berbasis React.js yang dikembangkan sebagai submission portofolio pribadi. Website ini dirancang untuk menyajikan pengalaman belanja fashion yang estetis, responsif, dan fungsional, dengan menyasar pengguna wanita remaja hingga dewasa muda yang menyukai gaya streetwear, editorial, dan playful.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Description
 
-## Expanding the ESLint configuration
+Clovera menampilkan katalog produk fashion dinamis yang terintegrasi dengan Firebase dan dirancang menggunakan pendekatan editorial-minimalist. UI-nya memanfaatkan palet warna lembut seperti Dusty Rose, Cocoa, Light Stone, Soft Blue, Soft Lime, dan Tera Cotta, yang dikonfigurasi langsung melalui Tailwind CSS untuk menghasilkan tampilan modern dan konsisten.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Technologies Used
+
+- React.js (Vite)
+- Tailwind CSS  
+- JavaScript  
+- Firebase (Authentication)  
+- React Router DOM  
+- React Context API  
+- LocalStorage  
+- Netlify (Deployment)
+
+---
+
+## ✨ Features
+
+## ✨ Features
+- Login & Register dengan Firebase Authentication (Email/Password & Google)
+- Landing Page berisi pengenalan tentang Clovera
+- Shop Page dengan daftar produk fashion dari Firestore (dinamis)
+- Product Filtering berdasarkan nama (A-Z), warna, kategori, harga (Low to High dan High to Low)
+- Product Detail Page dengan info lengkap dan aksi ke Cart/Wishlist
+- Wishlist dan Cart
+- Checkout Dummy Page yang menampilkan ringkasan pesanan 
+- Responsif dan mobile-friendly UI dengan desain visual yang modern
+
+## 🚀 Setup Instructions
+
+1. Clone repo dan install dependencies:
+   ```bash
+   git clone https://github.com/meepwhoosh/clovera.git
+   cd clovera
+   npm install
+   ```
+
+2. Siapkan Firebase:
+
+   * Buat project di [Firebase](https://console.firebase.google.com/)
+   * Aktifkan Auth (Email/Password & Google)
+   * Buat koleksi `products` di Firestore
+   * Tambahkan konfigurasi Firebase ke file `firebase/firebaseConfig.js`
+
+3. Jalankan proyek:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🤖 AI Support Explanation
+
+Selama pengembangan, AI IBM Granite digunakan untuk membantu menyusun dokumentasi & struktur folder modular, dan mempercepat proses penulisan komponen kode. Dukungan AI digunakan sebagai co-pilot kreatif, tanpa menggantikan pengambilan keputusan teknis dan desain.

@@ -35,7 +35,7 @@ const Home = () => {
               Explore Collection
             </Link>
             <Link 
-              to="/#a" 
+              to="" 
               className="btn-secondary text-lg px-8 py-4 inline-block bg-white/10 border-white text-white hover:bg-white hover:text-cocoa"
             >
               Learn More
